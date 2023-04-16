@@ -1,15 +1,9 @@
-import Link from 'next/link';
+import React from 'react'
+import { Link } from 'react-router-dom';
+import images from '../../public';
 import Image from 'next/image';
-import images from '../../public'
 
-const Header = () => {
-    const LinkArry = [
-        {
-            name: 'Home',
-            href: '/',
-        },
-    ];
-
+const Navbar = () => {
     return (
         <div className="bg-[#1A1921] px-[25px] py-[25px] w-full" >
             <div className="flex flex-row items-center justify-between">
@@ -27,8 +21,8 @@ const Header = () => {
                         <Link href="#" className="nav-link-custom mx-[16px] text-[#777E91]">
                             <Image src={images.lightSettings} alt="" />
                         </Link>
-                        <Link href="/login" className="nav-link-custom mx-[16px] text-[#111015]">
-                            <button variant="contained" className="py-1 bg-white hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-offset-2 px-[15px] leading-[32px] rounded-[8px]">
+                        <Link href="/login" className="nav-link-custom mx-[16px] text-[#777E91]">
+                            <button className="hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-offset-2">
                                 Connect Wallet
                             </button>
                         </Link>
@@ -56,4 +50,4 @@ const Header = () => {
     );
 }
 
-export default Header
+export default Navbar

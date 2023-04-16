@@ -1,9 +1,7 @@
-import Image from 'next/image'
-
-export default function Home() {
+import HomeLayout from '@/components/homepage/HomeLayout'
+export default function Home({ Component, pageProps }) {
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24">
-
-    </main>
+    <HomeLayout>
+    </HomeLayout>
   )
 }

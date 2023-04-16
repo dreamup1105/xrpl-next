@@ -1,15 +1,23 @@
-import { ReactComponent as ThreeColumnIcon } from './threeColumn.svg'
-import { ReactComponent as TwoColumnIcon } from './twoColumns.svg'
-import { ReactComponent as DropDownIcon } from './dropdown.svg'
-import { ReactComponent as AddPlusIcon } from './addIcon.svg'
-import { ReactComponent as RippleIcon } from './Ripple.svg'
-import { ReactComponent as SwapIcon } from './swap.svg'
+import ThreeColumnIcon from './threeColumn.svg'
+import TwoColumnIcon from './twoColumns.svg'
+import DropDownIcon from './dropdown.svg'
+import AddPlusIcon from './addIcon.svg'
+import RippleIcon from './Ripple.svg'
+import SwapIcon from './swap.svg'
+// import CaretDownIcon from './caret-down.svg'
+import CaretDownIcon from './caret-down.svg'
+import CaretUpIcon from './caret-up.svg'
 
-export {
+const icons = {
     ThreeColumnIcon,
     TwoColumnIcon,
     DropDownIcon,
     AddPlusIcon,
     RippleIcon,
-    SwapIcon
+    SwapIcon,
+    CaretDownIcon,
+    CaretUpIcon
 }
+
+export default icons;
+
