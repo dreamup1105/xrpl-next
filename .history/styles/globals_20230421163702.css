@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+
+/* .imgcss {
+  border-radius: 50%;
+  width: 35px;
+  display: inline;
+} */
+
+.dotalign {
+  @apply text-center;
+}
+
+.descriptiontext {
+  @apply ml-[10px];
+}
+
+.descriptiontextspan {
+  @apply ml-[43px];
+}
+
+
+.descriptiontextspan1 {
+  @apply ml-[44px];
+}
+
+.circleBase {
+  @apply rounded-full;
+}
+
+/* .type1 {
+  width: 100px;
+  height: 100px;
+  background: #272832;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  border: 6px solid #1A1921;
+  border-style: double;
+} */
+.type1 {
+  @apply w-100 h-10;
+}
+
+
+
+
+.type2 {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  display: inline;
+  border: 3px solid #1A1921;
+}
+
+.type3 {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  /* display: inline; */
+  margin-left: 11px;
+  margin-top: 5px;
+  border: 3px solid #000000;
+}
+
+/* Toggle B */
+input:checked~.dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+}
