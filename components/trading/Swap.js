@@ -119,7 +119,7 @@ const Swap = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex swap-btn items-start w-full flex-end mb-[15px] justify-end">
+                <div className="flex items-start justify-end w-full swap-btn flex-end">
                     <button variant="contained" className="py-1 bg-white hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-offset-2 px-[15px] leading-[32px] rounded-[8px]">
                         Swap
                     </button>

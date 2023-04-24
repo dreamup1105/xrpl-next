@@ -38,6 +38,7 @@ const TradingFeed = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [anchorEl, setAnchorEl] = useState(null);
     const [isOpen, setOpen] = useState(false);
+
     const handleChange = (event) => {
         setSearchTerm(event.target.value);
     };
@@ -66,34 +67,13 @@ const TradingFeed = () => {
                     <button aria-label="Example" className="text-white" onClick={handleClick}>
                         <FontAwesomeIcon icon={faEllipsisV} className="text-white" />
                     </button>
-                    {/* <Popover
-                        id={id}
-                        open={open}
-                        anchorEl={anchorEl}
-                        onClose={handleClose}
-                        anchorOrigin={{
-                            vertical: 'bottom',
-                            horizontal: 'left',
-                        }}
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        PaperProps={{
-                            style: styles.feedPopover,
-                        }}
-                    >
-                        <Typography className="p-2 bg-none" >
-                            <FeedSetting />
-                        </Typography>
-                    </Popover> */}
                     {isOpen ? (
                         <div className="absolute top-[40px] right-2 z-[2]" >
                             <FeedSetting />
                         </div>
                     ) : null}
                 </div>
-                <div className="relative search-bar w-full h-[45px] mb-2 my-2">
+                <div className="relative search-bar w-full h-[46px] mb-2 my-2">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewdiv="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>

@@ -42,14 +42,14 @@ const Header = () => {
                 </div>
             </div>
             <div className="flex-col hidden w-full max-md:flex">
-                <Link href="#" className="mx-2 nav-link-custom border-y-2">
+                <Link href="#" className="mx-2 text-white nav-link-custom border-y-2">
                     Discover
                 </Link>
-                <Link href="#" className="mx-2 border-b-2 nav-link-custom">
+                <Link href="#" className="mx-2 text-white border-b-2 nav-link-custom">
                     How it works
                 </Link>
-                <Link href="/marketplace" className="mx-2 border-b-2 nav-link-custom">
-                    Marketplace
+                <Link href="/connect-wallet" className="mx-2 text-white border-b-2 nav-link-custom">
+                    Connect Wallet
                 </Link>
             </div>
         </div>
