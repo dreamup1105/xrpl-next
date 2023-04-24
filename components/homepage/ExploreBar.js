@@ -1,19 +1,200 @@
+import { useEffect, useState, useContext } from 'react'
 import icons from '@/public/icons'
 import Dropdown from '../dropdown';
 import Image from 'next/image';
+import GridLayoutContext, { GridLayoutProvider } from '@/context/GridLayoutContext';
 
+// Two Columns View
+const trade_layouts_three_cols_view = [
+    {
+        x: 0,
+        y: 0,
+        w: 4,
+        h: 4,
+        i: 'feed',
+        status: false,
+        mw: 4,
+        // mh: 3
+    },
+    {
+        x: 4,
+        y: 0,
+        w: 2,
+        h: 1,
+        i: 'ripple',
+        status: false,
+        mw: 2,
+        mh: 1
+    },
+    {
+        x: 6,
+        y: 0,
+        w: 2,
+        h: 1,
+        i: 'greyhound',
+        status: false,
+        mw: 2,
+        mh: 1
+    },
+    {
+        x: 4,
+        y: 1,
+        w: 4,
+        h: 3,
+        i: 'quick-swap',
+        status: false,
+        mw: 4,
+        mh: 3.2
+    },
+    {
+        x: 4,
+        y: 4,
+        w: 4,
+        h: 4,
+        i: 'heat-map',
+        status: false,
+        mw: 4,
+        // mh: 3
+    },
+    {
+        x: 8,
+        y: 0,
+        w: 2,
+        h: 1,
+        i: 'sologenic',
+        status: false,
+        mw: 4,
+        mh: 1
+    },
+    {
+        x: 10,
+        y: 0,
+        w: 2,
+        h: 1,
+        i: 'coreum',
+        status: false,
+        mw: 4,
+        mh: 1
+    },
+    {
+        x: 8,
+        y: 1,
+        w: 4,
+        h: 4,
+        i: 'trade-chart',
+        status: false,
+        mw: 4,
+        // mh: 3.5
+    },
+]
+
+const trade_layouts_two_cols_view = [
+    {
+        x: 0,
+        y: 0,
+        w: 8,
+        h: 4,
+        i: 'feed',
+        status: false,
+        mw: 4,
+        // mh: 3
+    },
+    {
+        x: 8,
+        y: 0,
+        w: 2,
+        h: 1,
+        i: 'ripple',
+        status: false,
+        mw: 2,
+        mh: 1
+    },
+    {
+        x: 10,
+        y: 0,
+        w: 2,
+        h: 1,
+        i: 'greyhound',
+        status: false,
+        mw: 2,
+        mh: 1
+    },
+    {
+        x: 8,
+        y: 1,
+        w: 4,
+        h: 3,
+        i: 'quick-swap',
+        status: false,
+        mw: 4,
+        mh: 3
+    },
+    {
+        x: 8,
+        y: 4,
+        w: 4,
+        h: 4,
+        i: 'heat-map',
+        status: false,
+        mw: 4,
+        // mh: 3
+    },
+    {
+        x: 8,
+        y: 7,
+        w: 2,
+        h: 1,
+        i: 'sologenic',
+        status: false,
+        mw: 4,
+        mh: 1
+    },
+    {
+        x: 10,
+        y: 7,
+        w: 2,
+        h: 1,
+        i: 'coreum',
+        status: false,
+        mw: 4,
+        mh: 1
+    },
+    {
+        x: 8,
+        y: 8,
+        w: 4,
+        h: 4,
+        i: 'trade-chart',
+        status: false,
+        mw: 4,
+        // mh: 3.5
+    },
+]
+
+// Two Columns View
 const ExploreBar = () => {
+    const [columnNum, setColumnNum] = useState(3);
+    const { layouts, setLayout } = useContext(GridLayoutContext);
+
+    useEffect(() => {
+        if (columnNum == 3) {
+            setLayout(trade_layouts_three_cols_view)
+        } else {
+            setLayout(trade_layouts_two_cols_view)
+        }
+    }, [columnNum])
+
     return (
-        <>
-            <div className="flex flex-row justify-between items-center h-[60px] gap-4 my-[20px] w-full">
+        <GridLayoutProvider>
+            <div className="flex flex-row justify-between items-center h-[60px] gap-4 mt-[20px] w-full">
                 <div className="drop-down w-[135px]">
                     <Dropdown />
                 </div>
                 <div className="toggle-btn flex flex-row justify-center items-center w-[86px] p-[6px] rounded-[16px] bg-[#21212A] px-[6px] rounded-[16px]">
-                    <button className="p-2 mr-2">
+                    <button className={`p-2 mr-2 ${columnNum == 3 ? 'bg-[#1A1921]' : ''} w-[35px] h-[33px] rounded-[8px] align-middle`} onClick={() => setColumnNum(3)}>
                         <Image src={icons.ThreeColumnIcon} alt="three-column" />
                     </button>
-                    <button className="p-2 bg-[#1A1921] w-[35px] h-[33px] rounded-[8px] align-middle">
+                    <button className={`p-2 ${columnNum == 2 ? 'bg-[#1A1921]' : ''} w-[35px] h-[33px] rounded-[8px] align-middle`} onClick={() => setColumnNum(2)}>
                         <Image src={icons.TwoColumnIcon} alt="two-column" />
                     </button>
                 </div>
@@ -27,7 +208,7 @@ const ExploreBar = () => {
                     <Image src={icons.AddPlusIcon} alt="add-plus" />
                 </div>
             </div>
-        </>
+        </GridLayoutProvider>
     )
 }
 
