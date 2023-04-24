@@ -1,33 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import images from '../../public';
-import { Xumm } from 'xumm';
-import { useState } from 'react';
-
-
-const xumm = new Xumm('32ba5710-f17e-4e06-9ca8-8107edc2eb90', 'f9a19923-fea7-44d3-bf1f-7c927aac8cd0');
+import images from '../../public'
 
 const Header = () => {
-
-
-    const [xrpAddress, setXrpAddress] = useState("");
-    xumm.user.account.then(a => setXrpAddress(a ?? ''));
-    const connectXrpWallet = async () => {
-        if (!xrpAddress && !xumm.runtime.xapp) {
-            xumm.authorize();
-        }
-        else if (xrpAddress) {
-            xumm.logout();
-            setXrpAddress('');
-        }
-    }
-
     const LinkArry = [
         {
             name: 'Home',
             href: '/',
         },
     ];
+
     return (
         <div className="bg-[#1A1921] px-[25px] py-[25px] w-full" >
             <div className="flex flex-row items-center justify-between">
@@ -45,19 +27,9 @@ const Header = () => {
                         <Link href="#" className="nav-link-custom mx-[16px] text-[#777E91]">
                             <Image src={images.lightSettings} alt="" />
                         </Link>
-                        <Link href="/authentication/login" className="nav-link-custom mx-[16px] text-[#111015]">
-                            <button variant="contained" className="py-1 bg-white hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-offset-2 px-[15px] leading-[32px] rounded-[8px]"
-                                onClick={connectXrpWallet}
-                            >
-                                {
-                                    xrpAddress ?
-                                        <>
-                                            <div>disconnect</div>
-                                            <div>{xrpAddress}</div>
-                                        </>
-                                        :
-                                        "Connect Wallet"
-                                }
+                        <Link href="/login" className="nav-link-custom mx-[16px] text-[#111015]">
+                            <button variant="contained" className="py-1 bg-white hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-offset-2 px-[15px] leading-[32px] rounded-[8px]">
+                                Connect Wallet
                             </button>
                         </Link>
                     </div>
@@ -70,14 +42,14 @@ const Header = () => {
                 </div>
             </div>
             <div className="flex-col hidden w-full max-md:flex">
-                <Link href="#" className="mx-2 nav-link-custom border-y-2">
+                <Link href="#" className="mx-2 text-white nav-link-custom border-y-2">
                     Discover
                 </Link>
-                <Link href="#" className="mx-2 border-b-2 nav-link-custom">
+                <Link href="#" className="mx-2 text-white border-b-2 nav-link-custom">
                     How it works
                 </Link>
-                <Link href="/marketplace" className="mx-2 border-b-2 nav-link-custom">
-                    Marketplace
+                <Link href="/connect-wallet" className="mx-2 text-white border-b-2 nav-link-custom">
+                    Connect Wallet
                 </Link>
             </div>
         </div>

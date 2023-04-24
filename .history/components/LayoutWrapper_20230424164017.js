@@ -4,7 +4,9 @@ import ExploreBar from './homepage/ExploreBar'
 import { useRouter } from 'next/router'
 const LayoutWrapper = ({ children, Component, pageProps }) => {
     const router = useRouter()
+    // const { headerVisible, setHeaderVisible } = useApp()
     const [headerVisible, setHeaderVisible] = useState(true)
+    console.log(">>>", headerVisible)
     useEffect(() => {
         console.log(router.asPath)
         if (router.asPath.includes("/authentication")) { setHeaderVisible(false) }
