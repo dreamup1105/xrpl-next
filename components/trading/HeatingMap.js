@@ -5,7 +5,7 @@ const HeatingMap = () => {
         <>
             <div className="h-full">
                 <div className="flex h-full">
-                    <div className="grid w-full grid-cols-3 gap-2">
+                    <div className="grid w-full grid-cols-3 gap-[15px]">
                         <div className="flex items-center justify-center h-full p-4 bg-[#477843] rounded-lg">
                             <div className="flex flex-col text-center text-white">
                                 <span className="text-2xl font-bold">HOUND</span>
@@ -13,7 +13,7 @@ const HeatingMap = () => {
                                 <span className="text-lg font-bold">-0.05%</span>
                             </div>
                         </div>
-                        <div className="flex flex-col h-full gap-2" >
+                        <div className="flex flex-col h-full gap-[15px]" >
                             <div className="h-[60%]">
                                 <div className="flex items-center justify-center h-full p-4 bg-[#477843] rounded-lg">
                                     <div className="flex flex-col text-center text-white">
@@ -33,8 +33,8 @@ const HeatingMap = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col h-full gap-2">
-                            <div className="grid w-full h-full grid-cols-2 gap-1 h-[30%]">
+                        <div className="flex flex-col h-full gap-[15px]">
+                            <div className="grid w-full h-full grid-cols-2 gap-[15px] h-[30%]">
                                 <div className="flex items-center justify-center bg-[#783F4B] h-auto rounded-[8px] py-[40px]">
                                     <div className="flex flex-col text-center text-white">
                                         <span className="text-[16px] font-bold">CORE</span>
@@ -50,7 +50,7 @@ const HeatingMap = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-3 gap-1 h-[28%]">
+                            <div className="grid grid-cols-3 gap-[15px] h-[28%]">
                                 <div className="flex justify-center items-center bg-[#783F4B] h-auto rounded-[8px] py-[20px]">
                                     <div className="flex flex-col text-center text-white">
                                         <span className="text-[12px] font-bold">RPR</span>
@@ -73,7 +73,7 @@ const HeatingMap = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-4 gap-1 h-[15%]">
+                            <div className="grid grid-cols-4 gap-[15px] h-[15%]">
                                 <div className="bg-[#477843] rounded-[8px] flex justify-center items-center justify-items-center text-white">
                                     <span className="text-[10px] font-bold">RPR</span>
                                 </div>
@@ -87,14 +87,14 @@ const HeatingMap = () => {
                                     <span className="text-[10px] font-bold">BAY</span>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-5 gap-1 h-[14%]">
+                            <div className="grid grid-cols-5 gap-[15px] h-[14%]">
                                 <div className="bg-[#272832] rounded-[8px]"></div>
                                 <div className="bg-[#477843] rounded-[8px]"></div>
                                 <div className="bg-[#783F4B] rounded-[8px]"></div>
                                 <div className="bg-[#272832] rounded-[8px]"></div>
                                 <div className="bg-[#272832] rounded-[8px]"></div>
                             </div>
-                            <div className="grid grid-cols-6 gap-1 h-[13%]">
+                            <div className="grid grid-cols-6 gap-[15px] h-[13%]">
                                 <div className="bg-[#783F4B] rounded-[8px]"></div>
                                 <div className="bg-[#272832] rounded-[8px]"></div>
                                 <div className="bg-[#272832] rounded-[8px]"></div>

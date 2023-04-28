@@ -18,23 +18,23 @@ const Swap = () => {
 
     return (
         <div className="grid grid-cols-1 gap-[30px]">
-            <div className="flex flex-col  py-[13px] bg-[#21212A] rounded-[16px]">
+            <div className="flex flex-col bg-[#21212A] rounded-[16px]">
                 <div className="flex flex-row items-center justify-between mb-[21px]">
                     <div className="feed-title">
-                        <span className="text-white text-[20px] font-bold">Quick swap</span>
+                        <span className="text-white text-[20px] font-bold leading-[26.38px]">Quick swap</span>
                     </div>
                     <button aria-label="Example" className="text-white hover:bg-gray-700">
                         <FontAwesomeIcon icon={faEllipsisV} />
                     </button>
                 </div>
                 <div className="w-full h-auto rounded-[8px] border border-[#2C2C35] mb-[0px] relative p-[15px]">
-                    <div className="pay-with text-start">
-                        <span className="text-[12px] text-[#ffffff] opacity-60">Pay with</span>
+                    <div className="pay-with text-start pb-[11px]">
+                        <span className="text-[12px] text-[#ffffff] opacity-60 leading-[16px]">Pay with</span>
                     </div>
                     <div className="flex flex-col">
                         <div className="flex flex-row justify-between">
                             <div className="flex flex-row items-center">
-                                <div className="w-[30px] h-[30px] rounded-full bg-[#494C5B]"></div>
+                                <div className="w-[30px] h-[30px] rounded-full bg-[#494C5B] mr-[10px]"></div>
                                 <div className="m-0">
                                     <select
                                         id="select-token"
@@ -86,13 +86,13 @@ const Swap = () => {
                         height: '1px',
                         backgroundColor: '#21212A'
                     }}></div>
-                    <div className="Receive-with text-start">
-                        <span className="text-[12px] text-[#ffffff] opacity-60">Receive</span>
+                    <div className="Receive-with text-start mb-[10px]">
+                        <span className="text-[12px] text-[#ffffff] opacity-60 leading-[16px]">Receive</span>
                     </div>
                     <div className="flex flex-col">
                         <div className="flex flex-row justify-between">
                             <div className="flex flex-row items-center">
-                                <div className="w-[30px] h-[30px] rounded-full bg-[#494C5B]"></div>
+                                <div className="w-[30px] h-[30px] rounded-full bg-[#494C5B] mr-[10px]"></div>
                                 <div className="m-0">
                                     <select
                                         id="select-token"

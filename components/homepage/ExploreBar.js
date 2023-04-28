@@ -40,11 +40,11 @@ const trade_layouts_three_cols_view = [
         x: 4,
         y: 1,
         w: 4,
-        h: 3,
+        h: 3.05,
         i: 'quick-swap',
         status: false,
         mw: 4,
-        mh: 3.2
+        mh: 3
     },
     {
         x: 4,
@@ -123,7 +123,7 @@ const trade_layouts_two_cols_view = [
         x: 8,
         y: 1,
         w: 4,
-        h: 3,
+        h: 3.05,
         i: 'quick-swap',
         status: false,
         mw: 4,
